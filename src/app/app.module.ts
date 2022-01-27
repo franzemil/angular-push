@@ -7,6 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { UpdateManagerService } from './update-manager.service';
+import { NotificationManagerService } from './notification-manager.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,6 @@ import { UpdateManagerService } from './update-manager.service';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
+  constructor(notificationManager: NotificationManagerService) {
   }
 }
